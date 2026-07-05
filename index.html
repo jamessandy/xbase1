@@ -1,0 +1,543 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Xbase1 - Cloud and AI engineering for startups</title>
+    <meta
+      name="description"
+      content="Xbase1 designs, builds, and hardens cloud infrastructure, deployment pipelines, Kubernetes platforms, observability systems, and AI production workflows for startups."
+    >
+    <meta property="og:title" content="Xbase1 - Cloud and AI engineering for startups">
+    <meta
+      property="og:description"
+      content="Production-grade cloud and AI engineering for startups moving from prototype to production."
+    >
+    <meta property="og:type" content="website">
+    <link rel="icon" href="assets/xbase1-mark.svg" type="image/svg+xml">
+    <link rel="preload" href="assets/xbase1-terrain.svg" as="image">
+    <link rel="preload" href="assets/xbase1-signal-branch.svg" as="image">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body data-page="home">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <canvas class="three-scroll-scene" data-scroll-3d aria-hidden="true"></canvas>
+
+    <header class="site-header" data-header>
+      <nav class="nav-shell" aria-label="Primary navigation">
+        <a class="brand" href="index.html" aria-label="Xbase1 home">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span class="brand-text">
+            <strong>XBASE1</strong>
+            <small>Engineering</small>
+          </span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu" data-nav-toggle>
+          <span></span>
+          <span></span>
+          <span class="sr-only">Menu</span>
+        </button>
+
+        <div class="nav-menu" id="site-menu" data-nav-menu>
+          <a href="about.html">About</a>
+          <a href="#services">Services</a>
+          <a href="#stack">Stack</a>
+          <a href="#approach">Approach</a>
+          <a href="#work">Work</a>
+          <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="nav-extra">
+          <span>EN</span>
+          <a href="contact.html">Book a call</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="home">
+        <div class="terrain-stage" aria-hidden="true">
+          <div class="terrain-layer terrain-back"></div>
+          <div class="terrain-layer terrain-front"></div>
+          <div class="fog-band fog-one"></div>
+          <div class="fog-band fog-two"></div>
+          <span class="terrain-point"></span>
+        </div>
+
+        <div class="hero-inner">
+          <div class="hero-title reveal">
+            <p class="eyebrow">Production-grade cloud. Battle-tested AI.</p>
+            <h1>
+              <span>Build</span>
+              <span>for</span>
+              <span>scale</span>
+            </h1>
+          </div>
+
+          <div class="hero-copy reveal">
+            <p>
+              Resilient cloud foundations and scalable AI systems that help startups ship faster,
+              control costs, and grow reliably.
+            </p>
+            <div class="hero-cta-group">
+              <a class="underlined-link" href="contact.html">Plan your path to scale</a>
+              <a class="underlined-link" href="#approach">Review our approach</a>
+            </div>
+
+            <div class="hero-workflow" aria-label="Animated production workflow">
+              <span data-flow-node>Cloud</span>
+              <span data-flow-node>AI</span>
+              <span data-flow-node>Deploy</span>
+              <span data-flow-node>Observe</span>
+              <span data-flow-node>Scale</span>
+            </div>
+          </div>
+        </div>
+
+        <a class="scroll-cue" href="#positioning" aria-label="Scroll to content">Scroll</a>
+      </section>
+
+      <section class="about-section" id="positioning">
+        <div class="section-inner about-grid">
+          <p class="section-label reveal">Positioning</p>
+          <div class="about-copy reveal">
+            <h2>Great AI features fail on brittle infrastructure. Massive cloud setups bleed money.</h2>
+            <p>
+              Xbase1 builds the intersection: cloud foundations and AI systems designed for real growth.
+            </p>
+            <a class="underlined-link" href="about.html">See how we work</a>
+          </div>
+
+          <dl class="metric-strip reveal" aria-label="Xbase1 capabilities">
+            <div>
+              <dt>AWS / GCP</dt>
+              <dd>Cloud foundations</dd>
+            </div>
+            <div>
+              <dt>Terraform</dt>
+              <dd>Infrastructure as code</dd>
+            </div>
+            <div>
+              <dt>CI/CD</dt>
+              <dd>Delivery engineering</dd>
+            </div>
+            <div>
+              <dt>AI production</dt>
+              <dd>Serving and monitoring</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="capability-band" aria-label="Production capabilities">
+        <div class="capability-marquee" aria-hidden="true">
+          <span class="capability-item">
+            <svg class="capability-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="10" width="6" height="6" rx="1"/><rect x="15" y="10" width="6" height="6" rx="1"/><rect x="9" y="4" width="6" height="6" rx="1"/></svg>
+            AWS Architecture
+          </span>
+          <span class="capability-item">
+            <svg class="capability-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 15a4 4 0 0 1 8 0h2a3 3 0 0 0 0-6 4 4 0 0 0-7.72 1.57A3 3 0 0 0 6 15Z"/></svg>
+            GCP Infrastructure
+          </span>
+          <span class="capability-item">
+            <svg class="capability-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 7h8v2H8v3h5v2H8v3h5v2H8" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Terraform
+          </span>
+          <span class="capability-item">
+            <svg class="capability-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 8h3v2H7v4h3v2H7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 16h3v-4h-3v-2h3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 19l4-3v-8l-4-3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M19 5l-4 3v8l4 3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            CI/CD
+          </span>
+          <span class="capability-item">
+            <svg class="capability-icon" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 20 7.5 20 16.5 12 22 4 16.5 4 7.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M12 6v12M8 8.5l2.5 1.5M16 8.5l-2.5 1.5M8 15.5l2.5-1.5M16 15.5l-2.5-1.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Kubernetes
+          </span>
+          <span class="capability-item">
+            <svg class="capability-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            Observability
+          </span>
+          <span class="capability-item">
+            <svg class="capability-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 14a5 5 0 0 1 10 0v3H6v-3Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 9a3 3 0 0 1 3 3v2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M12 9a3 3 0 0 0-3 3v2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M9 6h6M12 3v3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            AI Productionization
+          </span>
+          <span class="capability-item">
+            <svg class="capability-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 4v6c0 5-4 8-8 8s-8-3-8-8V7l8-4Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8 11h8M8 15h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            Cloud Hardening
+          </span>
+        </div>
+        <div class="capability-marquee capability-marquee-alt" aria-hidden="true">
+          <span class="capability-item">
+            <svg class="capability-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="10" width="6" height="6" rx="1"/><rect x="15" y="10" width="6" height="6" rx="1"/><rect x="9" y="4" width="6" height="6" rx="1"/></svg>
+            AWS Architecture
+          </span>
+          <span class="capability-item">
+            <svg class="capability-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 15a4 4 0 0 1 8 0h2a3 3 0 0 0 0-6 4 4 0 0 0-7.72 1.57A3 3 0 0 0 6 15Z"/></svg>
+            GCP Infrastructure
+          </span>
+          <span class="capability-item">
+            <svg class="capability-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 7h8v2H8v3h5v2H8v3h5v2H8" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Terraform
+          </span>
+          <span class="capability-item">
+            <svg class="capability-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 8h3v2H7v4h3v2H7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 16h3v-4h-3v-2h3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 19l4-3v-8l-4-3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M19 5l-4 3v8l4 3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            CI/CD
+          </span>
+          <span class="capability-item">
+            <svg class="capability-icon" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 20 7.5 20 16.5 12 22 4 16.5 4 7.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M12 6v12M8 8.5l2.5 1.5M16 8.5l-2.5 1.5M8 15.5l2.5-1.5M16 15.5l-2.5-1.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Kubernetes
+          </span>
+          <span class="capability-item">
+            <svg class="capability-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            Observability
+          </span>
+          <span class="capability-item">
+            <svg class="capability-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 14a5 5 0 0 1 10 0v3H6v-3Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 9a3 3 0 0 1 3 3v2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M12 9a3 3 0 0 0-3 3v2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M9 6h6M12 3v3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            AI Productionization
+          </span>
+          <span class="capability-item">
+            <svg class="capability-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 4v6c0 5-4 8-8 8s-8-3-8-8V7l8-4Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8 11h8M8 15h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            Cloud Hardening
+          </span>
+        </div>
+      </section>
+
+      <section class="solutions-section" id="services" data-solutions-section>
+        <article class="solution-scene reveal" data-solution-card aria-live="polite">
+          <div class="solution-tabs reveal" role="tablist" aria-label="Service areas">
+            <button class="solution-tab is-active" type="button" role="tab" aria-selected="true" data-solution="cloud">Cloud Architecture</button>
+            <button class="solution-tab" type="button" role="tab" aria-selected="false" data-solution="iac">Terraform</button>
+            <button class="solution-tab" type="button" role="tab" aria-selected="false" data-solution="delivery">CI/CD Engineering</button>
+            <button class="solution-tab" type="button" role="tab" aria-selected="false" data-solution="platform">Kubernetes</button>
+            <button class="solution-tab" type="button" role="tab" aria-selected="false" data-solution="observability">Observability</button>
+            <button class="solution-tab" type="button" role="tab" aria-selected="false" data-solution="ai">AI Engineering</button>
+          </div>
+
+          <div class="solution-cube-gallery" aria-hidden="true">
+            <div class="solution-cube-stage">
+              <div class="solution-cube" data-solution-cube>
+                <div class="solution-cube-face solution-cube-face-front">
+                  <span class="cube-face-kicker">01</span>
+                  <strong>Cloud Architecture</strong>
+                  <p>Predictable environments built for ownership, security, and cost control.</p>
+                  <div class="cube-face-meta">
+                    <span>Foundation</span>
+                    <span>Ready to scale</span>
+                  </div>
+                </div>
+
+                <div class="solution-cube-face solution-cube-face-right">
+                  <span class="cube-face-kicker">02</span>
+                  <strong>Terraform IaC</strong>
+                  <p>Reusable modules and repeatable provisioning for safer change.</p>
+                  <div class="cube-face-meta">
+                    <span>Modules</span>
+                    <span>Safer change</span>
+                  </div>
+                </div>
+
+                <div class="solution-cube-face solution-cube-face-back">
+                  <span class="cube-face-kicker">03</span>
+                  <strong>CI/CD Engineering</strong>
+                  <p>Release paths that keep shipping stable and predictable.</p>
+                  <div class="cube-face-meta">
+                    <span>Delivery</span>
+                    <span>Lower risk</span>
+                  </div>
+                </div>
+
+                <div class="solution-cube-face solution-cube-face-left">
+                  <span class="cube-face-kicker">04</span>
+                  <strong>Kubernetes Platforms</strong>
+                  <p>Managed runtime platforms with autoscaling and operational runbooks.</p>
+                  <div class="cube-face-meta">
+                    <span>Runtime</span>
+                    <span>Operable platform</span>
+                  </div>
+                </div>
+
+                <div class="solution-cube-face solution-cube-face-top">
+                  <span class="cube-face-kicker">05</span>
+                  <strong>System Signals</strong>
+                  <p>Visibility across infrastructure and AI usage before problems surface.</p>
+                  <div class="cube-face-meta">
+                    <span>Observability</span>
+                    <span>Faster debugging</span>
+                  </div>
+                </div>
+
+                <div class="solution-cube-face solution-cube-face-bottom">
+                  <span class="cube-face-kicker">06</span>
+                  <strong>AI Engineering</strong>
+                  <p>Secure model serving, low-latency APIs, and cost-aware deployment.</p>
+                  <div class="cube-face-meta">
+                    <span>AI layer</span>
+                    <span>Production AI</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="solution-cube-shadow"></div>
+            <div class="solution-cube-counter">
+              <span data-solution-current>01</span>
+              <span>06</span>
+            </div>
+          </div>
+
+          <div class="solution-copy">
+            <p data-solution-copy>
+              We connect product needs to cloud foundations, delivery workflows, runtime platforms, and AI systems.
+            </p>
+            <a class="underlined-link" href="contact.html">Explore services</a>
+          </div>
+
+          <dl class="solution-metrics" aria-label="Selected service details">
+            <div>
+              <dt data-solution-metric-one>Foundation</dt>
+              <dd data-solution-value-one>Accounts / projects</dd>
+            </div>
+            <div>
+              <dt data-solution-metric-two>Controls</dt>
+              <dd data-solution-value-two>Security + cost</dd>
+            </div>
+            <div>
+              <dt data-solution-metric-three>Outcome</dt>
+              <dd data-solution-value-three>Ready to scale</dd>
+            </div>
+            <div>
+              <dt data-solution-metric-four>Engagement</dt>
+              <dd data-solution-value-four>Foundation build</dd>
+            </div>
+          </dl>
+        </article>
+      </section>
+
+      <section class="stack-section" id="stack">
+        <div class="stack-background" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="section-inner stack-grid">
+          <p class="section-label reveal">Production stack</p>
+          <div class="stack-heading reveal">
+            <h2>From product vision to resilient infrastructure.</h2>
+            <p>
+              We bridge product ambition to cloud reality with delivery, runtime, security, and AI.
+            </p>
+          </div>
+
+          <div class="stack-layers" aria-label="Infrastructure layers">
+            <article class="stack-layer reveal">
+              <span>01</span>
+              <h3>Product and AI layer</h3>
+              <p>Application services, LLM integrations, vector search, model endpoints, and data flows.</p>
+            </article>
+            <article class="stack-layer reveal">
+              <span>02</span>
+              <h3>Delivery layer</h3>
+              <p>Build pipelines, test gates, environment promotion, approvals, secrets, and rollback paths.</p>
+            </article>
+            <article class="stack-layer reveal">
+              <span>03</span>
+              <h3>Runtime layer</h3>
+              <p>Kubernetes, ingress, autoscaling, workload boundaries, and platform operations.</p>
+            </article>
+            <article class="stack-layer reveal">
+              <span>04</span>
+              <h3>Cloud foundation</h3>
+              <p>AWS or GCP accounts, networking, IAM, Terraform, data services, and cost visibility.</p>
+            </article>
+            <article class="stack-layer reveal">
+              <span>05</span>
+              <h3>Reliability signals</h3>
+              <p>Logs, metrics, traces, alerts, dashboards, and cost guardrails across the stack.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="approach-section" id="approach">
+        <div class="section-inner approach-grid">
+          <p class="section-label reveal">Approach</p>
+          <div class="approach-copy reveal">
+            <h2>A practical path from assessment to production.</h2>
+          </div>
+
+          <div class="approach-rows">
+            <article class="approach-row reveal">
+              <span>01</span>
+              <h3>Discover & audit</h3>
+              <p>Review architecture, cloud setup, workflows, and AI pipelines to find risk.</p>
+            </article>
+            <article class="approach-row reveal">
+              <span>02</span>
+              <h3>Design & blueprint</h3>
+              <p>Engineer a practical infrastructure and AI deployment plan for your roadmap.</p>
+            </article>
+            <article class="approach-row reveal">
+              <span>03</span>
+              <h3>Build & integrate</h3>
+              <p>Deploy cloud foundations, delivery systems, and AI layers alongside your team.</p>
+            </article>
+            <article class="approach-row reveal">
+              <span>04</span>
+              <h3>Harden & optimize</h3>
+              <p>Lock down security, reduce cost, and verify reliability under pressure.</p>
+            </article>
+            <article class="approach-row reveal">
+              <span>05</span>
+              <h3>Transfer & upskill</h3>
+              <p>Document the system so your team can operate it on its own.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="fit-section">
+        <div class="section-inner fit-grid">
+          <p class="section-label reveal">Client fit</p>
+          <div class="fit-heading reveal">
+            <h2>Built for teams at the point where growth becomes operationally serious.</h2>
+          </div>
+
+          <div class="fit-cards">
+            <article class="fit-card reveal">
+              <span>SaaS teams ready to scale</span>
+              <h3>Clean up cloud setups and automate delivery before infrastructure slows you down.</h3>
+              <p>Prepare for smoother releases, better security, and clearer cost control.</p>
+            </article>
+            <article class="fit-card reveal">
+              <span>Series A+</span>
+              <h3>Reduce risk when reliability becomes a business issue.</h3>
+              <p>Harden clusters, pipelines, observability, and spend controls as usage grows.</p>
+            </article>
+            <article class="fit-card reveal">
+              <span>AI-first teams ready for production</span>
+              <h3>Move prototypes into secure, scalable workflows.</h3>
+              <p>Deploy model serving, vector search, latency controls, and cost monitoring.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="work-section" id="work">
+        <div class="section-inner work-grid">
+          <p class="section-label reveal">Engagement examples</p>
+          <div class="work-heading reveal">
+            <h2>Infrastructure and AI systems built for production pressure.</h2>
+          </div>
+
+          <div class="work-list">
+            <article class="work-row reveal">
+              <span>Cloud Foundation</span>
+              <h3>Designed AWS/GCP infrastructure with Terraform, environments, networking, IAM, and deployment pipelines.</h3>
+            </article>
+            <article class="work-row reveal">
+              <span>Kubernetes Hardening</span>
+              <h3>Improved cluster reliability, autoscaling, observability, security policies, and deployment workflows.</h3>
+            </article>
+            <article class="work-row reveal">
+              <span>AI Deployment</span>
+              <h3>Built infrastructure for LLM-powered product features with secure APIs, monitoring, and scalable serving.</h3>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="readiness-section">
+        <div class="section-inner readiness-grid">
+          <p class="section-label reveal">Production readiness</p>
+          <div class="readiness-heading reveal">
+            <h2>What gets hardened before systems meet real pressure.</h2>
+          </div>
+
+          <div class="readiness-list">
+            <article class="readiness-item reveal">
+              <span>01</span>
+              <h3>Deployment safety</h3>
+              <p>Repeatable releases, rollback paths, test gates, and clearer change ownership.</p>
+            </article>
+            <article class="readiness-item reveal">
+              <span>02</span>
+              <h3>Cloud security</h3>
+              <p>IAM boundaries, network posture, least-privilege access, and secure service exposure.</p>
+            </article>
+            <article class="readiness-item reveal">
+              <span>03</span>
+              <h3>Operational visibility</h3>
+              <p>Dashboards, alerts, logs, traces, and failure signals that keep engineering teams ahead of issues.</p>
+            </article>
+            <article class="readiness-item reveal">
+              <span>04</span>
+              <h3>Cost and scaling control</h3>
+              <p>Resource right-sizing, autoscaling, spend visibility, and AI usage monitoring.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="insights-section" id="insights">
+        <div class="section-inner insights-grid">
+          <p class="section-label reveal">Notes</p>
+          <h2 class="reveal">Your systems should accelerate your growth, not hold it back.</h2>
+          <div class="insight-copy reveal">
+            <p>
+              Scaling should feel predictable. You shouldn’t fight infrastructure or worry that AI spikes costs.
+            </p>
+            <a class="underlined-link" href="contact.html">Schedule a strategy call</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="final-cta-section">
+        <div class="section-inner final-cta-grid">
+          <p class="section-label reveal">Start</p>
+          <div class="final-cta-copy reveal">
+            <h2>Building something that needs to scale?</h2>
+            <p>
+              Talk to Xbase1 about cloud, AI, observability, and production readiness.
+            </p>
+            <a class="underlined-link" href="contact.html">Book a strategy call</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-canvas">
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="about.html">About</a>
+          <a href="index.html#services">Services</a>
+          <a href="index.html#stack">Stack</a>
+          <a href="index.html#work">Work</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="footer-contact">
+          <span>Contact</span>
+          <a href="mailto:hello@xbase1.com">hello@xbase1.com</a>
+          <a href="contact.html">Book a consultation</a>
+        </div>
+
+        <div class="footer-location">
+          <span aria-hidden="true"></span>
+          <p>Remote-first cloud and AI engineering consultancy</p>
+          <p>Serving startup teams globally</p>
+          <p>Mon - Fri / 9AM - 6PM</p>
+        </div>
+
+        <strong class="footer-wordmark" aria-hidden="true">xbase1</strong>
+
+        <div class="footer-bottom">
+          <a href="contact.html">Terms</a>
+          <a href="contact.html">Privacy</a>
+          <a href="contact.html">Newsletter</a>
+          <a href="contact.html">LinkedIn</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="three-scroll.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
