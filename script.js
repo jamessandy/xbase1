@@ -416,7 +416,7 @@
       }
 
       window.location.href =
-        "mailto:hello@xbase1.com?subject=" +
+        "mailto:hello@xbase1.net?subject=" +
         encodeURIComponent(subject) +
         "&body=" +
         encodeURIComponent(bodyLines.join("\n"));

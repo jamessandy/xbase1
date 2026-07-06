@@ -13,7 +13,6 @@
   </head>
   <body data-page="contact">
     <a class="skip-link" href="#main">Skip to content</a>
-    <canvas class="three-scroll-scene" data-scroll-3d aria-hidden="true"></canvas>
 
     <header class="site-header" data-header>
       <nav class="nav-shell" aria-label="Primary navigation">
@@ -48,18 +47,14 @@
     </header>
 
     <main id="main">
-      <section class="contact-hero">
+      <section class="contact-hero no-scroll-lock">
         <div class="section-inner contact-grid">
           <div class="contact-copy reveal">
             <p class="eyebrow">Contact</p>
             <h1>Let's build the cloud and AI foundation your product needs.</h1>
-            <p>
-              Tell us what you are building, where your infrastructure stands today, and what you
-              need help with next.
-            </p>
             <div class="contact-note">
               <span>Prefer email?</span>
-              <a href="mailto:hello@xbase1.com">hello@xbase1.com</a>
+              <a href="mailto:hello@xbase1.net">hello@xbase1.net</a>
             </div>
           </div>
 
@@ -83,34 +78,11 @@
               </label>
             </div>
 
-            <fieldset>
-              <legend>What do you need help with?</legend>
-              <div class="checkbox-grid">
-                <label><input name="needs" type="checkbox" value="AWS/GCP Architecture">AWS/GCP Architecture</label>
-                <label><input name="needs" type="checkbox" value="Terraform">Terraform</label>
-                <label><input name="needs" type="checkbox" value="CI/CD">CI/CD</label>
-                <label><input name="needs" type="checkbox" value="Kubernetes">Kubernetes</label>
-                <label><input name="needs" type="checkbox" value="Observability">Observability</label>
-                <label><input name="needs" type="checkbox" value="Scaling">Scaling</label>
-                <label><input name="needs" type="checkbox" value="AI Engineering">AI Engineering</label>
-                <label><input name="needs" type="checkbox" value="Production Hardening">Production Hardening</label>
-              </div>
-            </fieldset>
-
-            <label>
-              <span>Project stage</span>
-              <select name="stage">
-                <option value="Pre-seed to Seed">Pre-seed to Seed</option>
-                <option value="Series A+">Series A+</option>
-                <option value="AI product team">AI product team</option>
-                <option value="Engineering team">Engineering team</option>
-                <option value="Not sure yet">Not sure yet</option>
-              </select>
-            </label>
+            <!-- Removed 'What do you need help with?' and 'Project stage' per request -->
 
             <label>
               <span>Message</span>
-              <textarea name="message" rows="6" required></textarea>
+              <textarea name="message" rows="3" required></textarea>
             </label>
 
             <button class="button button-primary form-submit" type="submit">Schedule a strategy call</button>
@@ -132,24 +104,18 @@
 
         <div class="footer-contact">
           <span>Contact</span>
-          <a href="mailto:hello@xbase1.com">hello@xbase1.com</a>
+          <a href="mailto:hello@xbase1.net">hello@xbase1.net</a>
           <a href="contact.html">Book a consultation</a>
         </div>
 
         <div class="footer-location">
           <span aria-hidden="true"></span>
-          <p>Remote-first cloud and AI engineering consultancy</p>
-          <p>Serving startup teams globally</p>
-          <p>Mon - Fri / 9AM - 6PM</p>
+          <p>RC: 9638753</p>
         </div>
 
         <strong class="footer-wordmark" aria-hidden="true">xbase1</strong>
 
         <div class="footer-bottom">
-          <a href="contact.html">Terms</a>
-          <a href="contact.html">Privacy</a>
-          <a href="contact.html">Newsletter</a>
-          <a href="contact.html">LinkedIn</a>
         </div>
       </div>
     </footer>

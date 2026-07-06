@@ -169,16 +169,33 @@ function initThreeScene(THREE, targetCanvas) {
   function render(time) {
     var state = getScrollState();
     var t = time * 0.001;
+    // If user scrolled past the first screen, clear the fallback canvas
+    // and keep the loop running so it can re-render if user scrolls back.
+    if (state.scrollScreens > 1) {
+      context.clearRect(0, 0, size.width, size.height);
+      window.requestAnimationFrame(render);
+      return;
+    }
     var progress = state.progress;
-    var screens = state.scrollScreens;
+    // Limit the animated 'screens' influence so elements only animate
+    // while the user is within the first scroll-screen.
+    var screens = Math.min(state.scrollScreens, 1);
+    // When the user scrolls past the first screen, freeze progress-driven
+    // motion so the boxes don't continue to drift/fall.
+    var progressInfluence = state.scrollScreens > 1 ? 0 : progress;
     var activeHead = (screens * 1.8) % nodes.length;
+    // Hide the whole rig (nodes, lines, planes) once the user scrolls
+    // past the first screen so the boxes are no longer visible.
+    var frozen = state.scrollScreens > 1;
+    rig.visible = !frozen;
 
-    rig.rotation.x = -0.1 + state.heroProgress * 0.32 + progress * 1.18 + pointer.y * 0.03;
+    rig.rotation.x = -0.1 + state.heroProgress * 0.32 + progressInfluence * 1.18 + pointer.y * 0.03;
     rig.rotation.y = -0.48 + screens * 0.34 + pointer.x * 0.04;
-    rig.rotation.z = -0.08 + Math.sin(t * 0.34 + progress * 4) * 0.04;
+    rig.rotation.z = -0.08 + Math.sin(t * 0.34 + progressInfluence * 4) * 0.04;
     rig.position.x = 1.18 - state.heroProgress * 0.82 + Math.sin(screens * 0.72) * 0.52;
     rig.position.y = -0.18 + Math.sin(screens * 0.58) * 0.42;
-    rig.position.z = -progress * 2.6 + Math.sin(screens * 0.9) * 0.34;
+    // Freeze the z position motion when beyond the first screen.
+    rig.position.z = -progressInfluence * 2.6 + Math.sin(screens * 0.9) * 0.34;
 
     nodes.forEach(function (node, index) {
       var pulse = 1 + Math.sin(t * 2.1 + index * 0.8 + screens * 0.62) * 0.18;
@@ -188,13 +205,14 @@ function initThreeScene(THREE, targetCanvas) {
       node.rotation.y = Math.sin(t * 0.1 + index * 0.4) * 0.1;
     });
 
+    // Only apply subtle plane motion while within the first screen.
     planes.forEach(function (plane, index) {
-      plane.material.opacity = 0.07 + Math.sin(t + index + progress * 4) * 0.018;
-      plane.position.z += Math.sin(t * 0.5 + index) * 0.0015;
+      plane.material.opacity = 0.07 + Math.sin(t + index + screens * 4) * 0.018;
+      plane.position.z += Math.sin(t * 0.5 + index) * 0.0015 * (1 - Math.max(0, state.scrollScreens - 1));
     });
 
-    line.material.opacity = 0.34 + Math.sin(progress * Math.PI) * 0.2;
-    camera.position.z = 10.6 - state.heroProgress * 1.2 - Math.sin(progress * Math.PI) * 1.4;
+    line.material.opacity = 0.34 + Math.sin(progressInfluence * Math.PI) * 0.2;
+    camera.position.z = 10.6 - state.heroProgress * 1.2 - Math.sin(progressInfluence * Math.PI) * 1.4;
     renderer.render(scene, camera);
     window.requestAnimationFrame(render);
   }
@@ -271,7 +289,7 @@ function initCanvasFallback(targetCanvas) {
     var state = getScrollState();
     var t = time * 0.001;
     var rotation = -0.35 + state.scrollScreens * 0.58 + Math.sin(t * 0.3) * 0.1;
-    var activeHead = (state.scrollScreens * 1.8) % points.length;
+    var activeHead = (Math.min(state.scrollScreens, 1) * 1.8) % points.length;
     var projected = points.map(function (point) {
       return project(point, rotation, state);
     });
@@ -283,11 +301,12 @@ function initCanvasFallback(targetCanvas) {
     context.fillStyle = "rgba(184, 216, 191, 0.18)";
 
     for (var plane = 0; plane < 4; plane += 1) {
-      var x = size.width * (0.48 + plane * 0.035 - state.heroProgress * 0.06) + Math.sin(state.scrollScreens * 0.64) * 42;
-      var y = size.height * (0.28 + plane * 0.08) + Math.cos(state.scrollScreens * 0.46) * 32;
+      var screensLimited = Math.min(state.scrollScreens, 1);
+      var x = size.width * (0.48 + plane * 0.035 - state.heroProgress * 0.06) + Math.sin(screensLimited * 0.64) * 42;
+      var y = size.height * (0.28 + plane * 0.08) + Math.cos(screensLimited * 0.46) * 32;
       context.save();
       context.translate(x, y);
-      context.rotate(-0.18 + state.scrollScreens * 0.18);
+      context.rotate(-0.18 + screensLimited * 0.18);
       context.fillRect(-160, -42, 320, 84);
       context.restore();
     }

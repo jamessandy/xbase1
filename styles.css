@@ -1566,6 +1566,11 @@ h3 {
   transform: rotate(-28deg) translateX(var(--stack-line-c));
 }
 
+/* Utility to hide decorative stack lines when not desired */
+.stack-background.hide-lines span {
+  display: none;
+}
+
 .stack-grid,
 .fit-grid,
 .readiness-grid,
@@ -2184,6 +2189,26 @@ h3 {
   background: var(--xbase-paper);
 }
 
+/* Make contact page fit the viewport and prevent body scrolling beyond footer.
+   The contact content will be constrained to the viewport height and the footer
+   remains reachable; on small screens the natural flow falls back to default. */
+body[data-page="contact"] main {
+  height: calc(100svh - 0px);
+  overflow: hidden;
+}
+
+body[data-page="contact"] .contact-hero {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/* Allow footer to scroll into view only by using the page footer anchor.
+   The main content remains fixed; user can navigate to footer via links. */
+body[data-page="contact"] .site-footer {
+  position: relative;
+}
+
 .contact-grid {
   display: grid;
   grid-template-columns: minmax(280px, 0.78fr) minmax(0, 1.22fr);
@@ -2198,7 +2223,7 @@ h3 {
 
 .contact-copy h1 {
   color: var(--xbase-ink);
-  font-size: clamp(4rem, 8vw, 9.2rem);
+  font-size: clamp(2.6rem, 5.4vw, 4.6rem);
   line-height: 0.82;
 }
 
@@ -2227,7 +2252,7 @@ h3 {
 .contact-form {
   display: grid;
   gap: 24px;
-  padding: 30px;
+  padding: 16px;
   background: var(--xbase-soft-green);
   border: 1px solid var(--xbase-line-strong);
 }
@@ -2235,7 +2260,7 @@ h3 {
 .form-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 20px;
+  gap: 12px;
 }
 
 .contact-form label,
@@ -2264,12 +2289,12 @@ h3 {
 
 .contact-form input,
 .contact-form select {
-  min-height: 50px;
+  min-height: 44px;
   padding: 0 13px;
 }
 
 .contact-form textarea {
-  min-height: 150px;
+  min-height: 100px;
   padding: 13px;
   resize: vertical;
 }
